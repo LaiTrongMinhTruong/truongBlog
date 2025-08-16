@@ -1,0 +1,6 @@
+.background {
+  background-image: url("./assets/seamless-texture-paper.jpg");
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  /* background-color: #cccccc; */
+}
