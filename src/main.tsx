@@ -2,30 +2,34 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
-import "./index.css";
 import WelcomePage from "./components/WelcomePage.tsx";
+import "./index.css";
+import BlogPage from "./components/BlogPage.tsx";
+import ContactPage from "./components/ContactPage.tsx";
+import AboutPage from "./components/AboutPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children:[
+    children: [
       {
-        path: "welcome",
+        path: "",
         element: <WelcomePage />,
       },
       {
-
-      }
-    ]
-  },
-  {
-    path: "/about",
-    element: <div>About Page</div>,
-  },
-  {
-    path: "/contact",
-    element: <div>Contact Page</div>,
+        path: "/blog",
+        element: <BlogPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
+      },
+    ],
   },
 ]);
 
