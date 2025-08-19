@@ -10,7 +10,7 @@ const RightCard = () => {
           natus eum est reiciendis.
         </p>
       </div>
-      <div className="flex flex-col items-center basis-1/3 ml-4">
+      <div className="lg:flex flex-col items-center basis-1/3 ml-4 hidden">
         <div>
           <img src={picture} alt="" />
         </div>

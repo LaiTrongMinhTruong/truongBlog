@@ -20,7 +20,7 @@ const CenterCard = () => {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="flex-1">
+        <div className="lg:block hidden flex-1">
           <p className="text-sm font-light text-justify">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
             ipsum, ullam nostrum laudantium alias, modi quaerat eveniet ex error

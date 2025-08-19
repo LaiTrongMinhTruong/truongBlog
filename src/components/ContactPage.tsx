@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const ContactPage = () => {
   return (
-    <div className="flex flex-col items-center justify-around gap-4 pb-30 pt-15">
+    <div className="flex flex-col items-center justify-around gap-4 pb-40 pt-15">
       <div>
         <img
           src={avatar}

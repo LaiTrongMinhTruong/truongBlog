@@ -6,8 +6,8 @@ import picNum02 from "../assets/pic_num02.png";
 const Header = () => {
   return (
     <>
-      <header className="flex flex-row items-stretch">
-        <div className="flex flex-col w-2/3">
+      <header className="lg:flex lg:flex-row lg:items-stretch block w-full mx-auto">
+        <div className="flex flex-col lg:w-2/3 w-full">
           <div className="flex justify-between my-2">
             <p className="text-xl">Business & Marketing</p>
             <p className="text-xl">Website Exclusive</p>
@@ -29,7 +29,7 @@ const Header = () => {
           </div>
           <img src={picNum01} alt="" className="w-full min-h-28" width="420" height="100"/>
         </div>
-        <div className="w-1/3 flex flex-col items-center mt-4">
+        <div className="w-1/3 lg:flex flex-col items-center mt-4 hidden">
           <img src={picNum02} alt="" className="h-full" width="120" height="250" />
           <p className="text-center text-sm font-light">Vol No. 25</p>
         </div>

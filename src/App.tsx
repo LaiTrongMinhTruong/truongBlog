@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className="w-screen h-full background text-red-950 font-mono">
-        <div className="w-1/2 mx-auto relative">
+        <div className="lg:w-1/2 lg:px-0 mx-auto relative w-full px-5">
           <Header />
           <Footer />
         </div>
