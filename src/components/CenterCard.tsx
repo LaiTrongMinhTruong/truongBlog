@@ -1,5 +1,5 @@
 import { Separator } from "@radix-ui/react-separator";
-import pictureCenter from "../assets/pic_num03.png";
+import pictureCenter from "../assets/center_pic.jpg";
 
 const CenterCard = () => {
   return (
@@ -7,10 +7,7 @@ const CenterCard = () => {
       <div className="flex flex-row  items-stretch gap-4 my-2">
         <div className="flex-1">
           <p className="text-sm font-light text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            repellat numquam veritatis reprehenderit adipisci enim possimus
-            dignissimos consequuntur sunt officia repellendus eveniet
-            distinctio, quaerat ex repudiandae fugit quae, harum voluptate.
+            Tôi từng nghĩ những điều mình trải qua chỉ nên giữ cho riêng mình. Nhưng rồi tôi nhận ra, đôi khi chỉ cần một câu chuyện thật lòng cũng có thể chạm đến ai đó đang lặng lẽ chịu đựng. Blog này là nơi tôi viết cho những ai từng yếu đuối, từng đứng giữa ranh giới của sợ hãi và hy vọng.
           </p>
         </div>
         <div className="flex-1">
@@ -22,10 +19,7 @@ const CenterCard = () => {
         </div>
         <div className="lg:block hidden flex-1">
           <p className="text-sm font-light text-justify">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
-            ipsum, ullam nostrum laudantium alias, modi quaerat eveniet ex error
-            nihil atque debitis esse quasi magni voluptates nemo? Natus, iusto
-            voluptatem.
+            Mỗi người đều có hành trình chữa lành riêng. Tôi không chắc con đường của mình đã đúng, nhưng tôi tin rằng chỉ cần tiếp tục bước, ánh sáng sẽ xuất hiện ở cuối con dốc. Nếu anh/chị đọc đến đây, cảm ơn vì đã cùng tôi đi một đoạn nhỏ trên hành trình đó.
           </p>
         </div>
       </div>

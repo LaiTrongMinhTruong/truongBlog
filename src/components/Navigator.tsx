@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
 const links = [
   { path: "/", label: "Welcome" },
@@ -9,14 +9,16 @@ const links = [
 
 const Navigator = () => {
   return (
-    <nav className="my-2">
-      <ul className="flex flex-row justify-around text-md font-semibold">
+    <nav className="my-2 w-full">
+      <ul className="flex flex-row flex-wrap items-center justify-center gap-6 text-md font-semibold">
         {links.map((link) => (
-          <li key={link.path} className="hover:text-blue-500 lowercase">
+          <li key={link.path} className="lowercase">
             <NavLink
               to={link.path}
               className={({ isActive }) =>
-                isActive ? "text-red-500 font-bold" : "text-gray-700"
+                isActive
+                  ? "underline underline-offset-4"
+                  : "opacity-80 hover:opacity-100 transition-opacity"
               }
             >
               {link.label}

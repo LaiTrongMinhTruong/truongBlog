@@ -1,20 +1,17 @@
-import picture from "../assets/pic_num05.png";
+import picture from "../assets/dieu_nho_be.jpg";
 const RightCard = () => {
   return (
     <div className="flex flex-row items-stretch my-2">
-      <div className="basis-2/3">
+      <div className="basis-1/2">
         <p className="text-sm font-light text-justify">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam iure
-          odio, perspiciatis deserunt ullam praesentium sed quibusdam saepe!
-          Voluptate, ratione quas? Expedita deleniti incidunt possimus explicabo
-          natus eum est reiciendis.
+          Một buổi sáng chậm lại, một tách trà ấm, vài dòng chữ đẹp, một ánh mắt hiểu mình — đôi khi hạnh phúc chỉ giản đơn như thế. Ta không cần tìm bình yên ở nơi xa, vì chính trong những điều nhỏ bé, ta đã có cả bầu trời.
         </p>
       </div>
-      <div className="lg:flex flex-col items-center basis-1/3 ml-4 hidden">
+      <div className="lg:flex flex-col items-center basis-1/2 ml-4 hidden">
         <div>
           <img src={picture} alt="" />
         </div>
-        <h4 className="text-xl font-bold lowercase">chad</h4>
+        <h4 className="text-xl font-bold lowercase text-center">điều nhỏ bé</h4>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const BlogInfoCard = ({ blogTitle, blogDescription }: BlogChildProp) => {
         <h4 className="text-md font-bold lowercase">{blogTitle}</h4>
         <p className="text-sm font-light text-justify">{blogDescription}</p>
       </div>
-      <Button variant="outline" className="rounded-3xl mx-3">
+      <Button variant="outline" className="rounded-3xl mx-3 bg-transparent">
         Read
       </Button>
     </div>
