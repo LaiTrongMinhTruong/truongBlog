@@ -1,34 +1,35 @@
+import CategoryPage from "@/components/blog/CategoryPage.tsx";
+import PostPage from "@/components/blog/PostPage.tsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import App from "./App.tsx";
-import WelcomePage from "./components/WelcomePage.tsx";
+import AboutPage from "./components/about/AboutPage.tsx";
+import BlogPage from "./components/blog/BlogPage.tsx";
+import ContactPage from "./components/contact/ContactPage.tsx";
+import WelcomePage from "./components/home/WelcomePage.tsx";
 import "./index.css";
-import BlogPage from "./components/BlogPage.tsx";
-import ContactPage from "./components/ContactPage.tsx";
-import AboutPage from "./components/AboutPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Navigate to="/vn" replace />,
+  },
+  {
+    path: ":lang",
     element: <App />,
     children: [
-      {
-        path: "",
-        element: <WelcomePage />,
-      },
-      {
-        path: "/blog",
-        element: <BlogPage />,
-      },
-      {
-        path: "/about",
-        element: <AboutPage />,
-      },
-      {
-        path: "/contact",
-        element: <ContactPage />,
-      },
+      { index: true, element: <WelcomePage /> },
+      { path: "welcome", element: <WelcomePage /> },
+      { path: "blog", element: <BlogPage /> },
+      { path: "blog/:id", element: <PostPage /> },
+      { path: "blog/category/:category", element: <CategoryPage /> },
+      { path: "about", element: <AboutPage /> },
+      { path: "contact", element: <ContactPage /> },
     ],
   },
 ]);

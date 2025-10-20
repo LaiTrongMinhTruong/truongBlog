@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
+import Reveal from "../Reveal";
 import CenterCard from "./CenterCard";
 import Group3Left from "./Group3Left";
-import Reveal from "./Reveal";
 
 const WelcomePage = () => {
   return (

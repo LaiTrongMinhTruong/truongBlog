@@ -1,5 +1,5 @@
-import about_pic1 from "../assets/about_pic01.png";
-import about_pic2 from "../assets/about_pic02.png";
+import about_pic1 from "../../assets/about_pic01.png";
+import about_pic2 from "../../assets/about_pic02.png";
 const DetailsAboutCard = () => {
   return (
     <div className="flex flex-row justify-between items-stretch gap-4 ">

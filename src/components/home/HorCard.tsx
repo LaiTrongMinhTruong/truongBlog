@@ -1,4 +1,4 @@
-import picture from "../assets/di_tiep.jpg";
+import picture from "../../assets/di_tiep.jpg";
 const HorCard = () => {
   return (
     <div className="flex flex-col items-stretch gap-2">

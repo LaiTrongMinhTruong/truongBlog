@@ -1,11 +1,11 @@
-import about_pic03 from "../assets/tuonglai.jpg";
+import about_pic03 from "../../assets/tuonglai.jpg";
 const ConcludeAboutCard = () => {
   return (
     <div className="flex flex-row justify-between items-stretch gap-4">
       <div className="w-full basis-1/2">
         <img src={about_pic03} alt="" className="w-full"/>
       </div>
-      <div className="flex flex-col justify-between items-stretch basis-1/2">
+      <div className="flex flex-col justify-start items-stretch basis-1/2">
         <h3 className="lowercase text-2xl font-bold">
           tôi chọn đi chậm, nhưng đi xa
         </h3>

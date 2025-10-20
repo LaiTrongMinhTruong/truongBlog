@@ -1,7 +1,7 @@
 import { Separator } from "@radix-ui/react-separator";
-import HorCard from "./HorCard";
-import RightCard from "./RightCard";
-import VerCard from "./VerCard";
+import HorCard from "./home/HorCard";
+import RightCard from "./home/RightCard";
+import VerCard from "./home/VerCard";
 
 const Group3Right = () => {
   return (

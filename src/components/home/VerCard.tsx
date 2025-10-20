@@ -1,4 +1,4 @@
-import picture from "../assets/hoa_sen.jpg";
+import picture from "../../assets/hoa_sen.jpg";
 const VerCard = () => {
   return (
     <div className="flex flex-col items-stretch gap-2">

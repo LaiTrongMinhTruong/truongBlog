@@ -2,10 +2,11 @@ import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import path from "path"
+import mdx from '@mdx-js/rollup'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),
+  plugins: [mdx(), react(),
     tailwindcss()],
     resolve: {
     alias: {

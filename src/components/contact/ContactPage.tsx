@@ -1,8 +1,70 @@
-import avatar from "../assets/avatarContact.png";
-import Reveal from "./Reveal";
-import { Button } from "./ui/button";
+import avatar from "../../assets/avatarContact.png";
+import Reveal from "../Reveal";
+import { Button } from "../ui/button";
+import ProjectCard from "./ProjectCard";
+import { useParams } from "react-router";
 
 const ContactPage = () => {
+  const project_en = [
+    {
+      title: "Personal Portfolio Website",
+      desc: "A sleek and modern portfolio website to showcase my projects and skills.",
+      link: "",
+      imgUrl: "",
+    },
+    {
+      title: "E-commerce Platform",
+      desc: "A full-featured e-commerce platform with shopping cart and payment integration.",
+      link: "",
+      imgUrl: "",
+    },
+    {
+      title: "Blog Website",
+      desc: "A responsive blog website with content management features.",
+      link: "",
+      imgUrl: "",
+    },
+    {
+      title: "Task Management App",
+      desc: "A productivity app to help users manage and track their tasks effectively.",
+      link: "",
+      imgUrl: "",
+    },
+  ]
+  const project_vn = [
+    {
+      title: "CV cá nhân cho khách hàng 1",
+      desc: "Website cv cá nhân hiện đại thể hiện các yếu tố cần thiết của một cv chuyên nghiệp.",
+      link: "https://customer01cv.vercel.app/",
+      imgUrl: "",
+    },
+    {
+      title: "Boundless web",
+      desc: "Nền tảng thương mại điện tử đầy đủ với giao diện bắt măt, hiện đại.",
+      link: "https://minh-truong-cv.vercel.app/about",
+      imgUrl: "",
+    },
+    {
+      title: "Minh Trường example cv",
+      desc: "Website blog đáp ứng với các tính năng quản lý nội dung.",
+      link: "https://minh-truong-cv.vercel.app/about",
+      imgUrl: "",
+    },
+    {
+      title: "Ứng dụng danh bạ số 1",
+      desc: "Ứng dụng năng suất giúp người dùng quản lý và theo dõi công việc hiệu quả.",
+      link: "https://contact-list-demo-lovat.vercel.app/",
+      imgUrl: "",
+    },
+    {
+      title: "Blog của Trường",
+      desc: "Ứng dụng năng suất giúp người dùng quản lý và theo dõi công việc hiệu quả.",
+      link: "https://blog-cua-truong.vercel.app/",
+      imgUrl: "",
+    },
+  ]
+  const params = useParams();
+  const lang = (params.lang as "vn" | "en") ?? "vn";
   return (
     <div className="flex flex-col items-center justify-around gap-4 pb-40 pt-15">
       <Reveal>
@@ -19,7 +81,9 @@ const ContactPage = () => {
       </Reveal>
       <Reveal>
         <p className="text-md font-light text-center">
-          Contact me to get started with growing your business online
+          {lang === "vn"
+            ? "hãy liên hệ tôi nếu có góp ý hay bất cứ mối quan tâm về sự hợp tác với tớ"
+            : "please contact me if you have any comments or concerns about working with me."}
         </p>
       </Reveal>
       <Reveal>
@@ -32,6 +96,30 @@ const ContactPage = () => {
             Click here for contact info and my CV
           </a>
         </Button>
+      </Reveal>
+      <Reveal>
+        <div className="mb-4">các dự án tớ đã từng làm</div>
+      </Reveal>
+      <Reveal>
+        <div className="grid grid-cols-2">
+          {lang === "vn" ? (project_vn.map((proj, index) => (
+            <ProjectCard
+              key={index}
+              title={proj.title}
+              desc={proj.desc}
+              link={proj.link}
+              imgUrl={proj.imgUrl}
+            />
+          ))) : (project_en.map((proj, index) => (
+            <ProjectCard
+              key={index}
+              title={proj.title}
+              desc={proj.desc}
+              link={proj.link}
+              imgUrl={proj.imgUrl}
+            />
+          )))}
+        </div>
       </Reveal>
       <Reveal>
         <p className="text-md font-light text-center mb-4">or find me at</p>

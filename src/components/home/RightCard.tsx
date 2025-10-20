@@ -1,4 +1,4 @@
-import picture from "../assets/dieu_nho_be.jpg";
+import picture from "../../assets/dieu_nho_be.jpg";
 const RightCard = () => {
   return (
     <div className="flex flex-row items-stretch my-2">
