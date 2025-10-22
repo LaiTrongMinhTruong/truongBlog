@@ -1,7 +1,7 @@
-import { useParams } from "react-router";
-import type { BlogChildProp } from "../types/BlogChildProp";
 import { CATEGORY_LABELS_EN } from "@/blog/data.en";
 import { CATEGORY_LABELS_VN } from "@/blog/data.vn";
+import { useParams } from "react-router";
+import type { BlogChildProp } from "../types/BlogChildProp";
 
 const BlogInfoCard = ({
   blogTitle,
@@ -19,10 +19,13 @@ const BlogInfoCard = ({
         <h4 className="text-xl font-bold lowercase">{blogTitle}</h4>
         <p className="text-sm font-light text-justify">{blogDescription}</p>
         <p>
+          <span className="italic">{category.length > 1 ? "categories: " : "category: "}</span>
           {category.map((c, i) => (
             <span key={i} className="mr-4 italic">
-              {lang === "en" ? CATEGORY_LABELS_EN[c].label : CATEGORY_LABELS_VN[c].label}
-            </span> 
+              {lang === "en"
+                ? CATEGORY_LABELS_EN[c].label
+                : CATEGORY_LABELS_VN[c].label}
+            </span>
           ))}
         </p>
         <p className="text-xs opacity-70 mt-1">{date}</p>

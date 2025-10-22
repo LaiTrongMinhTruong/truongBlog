@@ -77,12 +77,12 @@ const ContactPage = () => {
         </div>
       </Reveal>
       <Reveal>
-        <h3 className="text-3xl font-bold lowercase">Contact Me Now</h3>
+        <h3 className="text-3xl font-bold lowercase">{lang === "vn" ? "kết nối với tớ" : "Contact Me Now"}</h3>
       </Reveal>
       <Reveal>
         <p className="text-md font-light text-center">
           {lang === "vn"
-            ? "hãy liên hệ tôi nếu có góp ý hay bất cứ mối quan tâm về sự hợp tác với tớ"
+            ? "hãy liên hệ nếu có góp ý hay bất cứ mối quan tâm về sự hợp tác với tớ"
             : "please contact me if you have any comments or concerns about working with me."}
         </p>
       </Reveal>
@@ -93,12 +93,12 @@ const ContactPage = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Click here for contact info and my CV
+            {lang === "vn" ? "view my CV" : "view my CV"}
           </a>
         </Button>
       </Reveal>
       <Reveal>
-        <div className="mb-4">các dự án tớ đã từng làm</div>
+        <div className="mb-4">{lang === "vn" ? "các dự án tớ làm/tham gia làm" : "projects I do/participate in"}</div>
       </Reveal>
       <Reveal>
         <div className="grid grid-cols-2">
@@ -122,9 +122,9 @@ const ContactPage = () => {
         </div>
       </Reveal>
       <Reveal>
-        <p className="text-md font-light text-center mb-4">or find me at</p>
-        <ul className="flex flex-row items-center justify-center gap-4">
-          <li>
+        <p className="text-md font-light text-center mb-4">{lang === "vn" ? "hoặc liên hệ tớ tại" : "or find me at"}</p>
+        <ul className="flex flex-col items-start justify-center gap-4">
+          <li className="flex flex-row items-center gap-4">
             <a href="mailto:mkhang189@gmail.com">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -132,20 +132,21 @@ const ContactPage = () => {
                 height="2em"
                 viewBox="0 0 24 24"
               >
-                {/* Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE */}
                 <path
                   fill="currentColor"
                   d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z"
                 />
               </svg>
             </a>
+            <p>E-mail: mkhang189@gmail.com</p>
           </li>
-          <li>
+          <li className="flex flex-row items-center gap-4">
             <a href="tel:+84345564926">
               <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" >{/* Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE */}<path fill="currentColor" d="M22 3H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M8 6a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m6 12H2v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1zm3.85-4h1.65l1.5 2l-2 2c-1.3-1-2.27-2.39-2.72-4c-.18-.64-.28-1.31-.28-2s.1-1.36.28-2c.45-1.62 1.42-3 2.72-4l2 2l-1.5 2h-1.65c-.22.63-.35 1.3-.35 2s.13 1.37.35 2" /></svg>
             </a>
+            <p>{lang === "vn" ? "sdt" : "Phone"}: (+84)345 564 926</p>
           </li>
-          <li>
+          <li className="flex flex-row items-center gap-4">
             <a
               href="https://www.facebook.com/truong.lai.603812"
               target="_blank"
@@ -164,8 +165,9 @@ const ContactPage = () => {
                 />
               </svg>
             </a>
+            <p>facebook: <a href="https://www.facebook.com/truong.lai.603812" className="hover:underline">Lại Trọng Minh Trường</a></p>
           </li>
-          <li>
+          <li className="flex flex-row items-center gap-4">
             <a
               href="https://www.instagram.com/m.truonq_"
               target="_blank"
@@ -197,6 +199,7 @@ const ContactPage = () => {
                 />
               </svg>
             </a>
+            <p>Instagram: <a href="https://www.instagram.com/m.truonq_" className="hover:underline">m.truonq_</a></p>
           </li>
         </ul>
       </Reveal>

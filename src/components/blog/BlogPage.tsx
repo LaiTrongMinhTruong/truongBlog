@@ -12,22 +12,34 @@ const CATEGORY_LABELS: Record<
   "tam-su": {
     vn: "Tâm sự",
     en: "Confessions",
-    desc: { vn: "Những trải lòng riêng.", en: "Quiet personal notes." },
+    desc: {
+      vn: "những dòng viết chân thành, nơi tớ nói với chính mình, về những điều muốn nói nhưng khó kể, về cảm xúc còn đang tìm cách gọi tên.",
+      en: "sincere writings, where i talk to myself, about things i want to say but find hard to say, about emotions i still find a name for.",
+    },
   },
   "an-ui": {
     vn: "An ủi",
     en: "Comfort",
-    desc: { vn: "Vỗ về và sẻ chia.", en: "Words of comfort." },
+    desc: {
+      vn: "những câu chữ dịu dàng như một cái ôm cho những ngày cậu mệt, cho cả chính tớ khi cần ai đó quan tâm một chút.",
+      en: "gentle words like a hug for the days you are tired, and for me when I need someone to care a little.",
+    },
   },
   "ke-chuyen": {
     vn: "Kể Chuyện",
     en: "Storytelling",
-    desc: { vn: "Khích lệ bản thân.", en: "Small encouragements." },
+    desc: {
+      vn: "tớ muốn ghi nhớ và chia sẻ những điều nhỏ nhặt tớ gặp. tớ tin rằng với mỗi người khác nhau, họ sẽ có cảm nhận khác nhau, bài học khác nhau.",
+      en: "I want to remember and share the little things I encounter. I believe that with different people, they will have different feelings, different lessons.",
+    },
   },
   "chuyen-ngoai-le": {
     vn: "Chuyện ngoài lề",
     en: "Side notes",
-    desc: { vn: "Những chuyện quanh ta.", en: "Misc side stories." },
+    desc: {
+      vn: "sẽ còn rất nhiều thứ tớ muốn làm, muốn khoe, muốn than thở, dành cho những chuyến dạo thăm blog của tớ mà chẳng có mục đích gì.",
+      en: "there will be so many things i want to do, to show off, to complain about, to spend on aimless visits to my blog.",
+    },
   },
 };
 
