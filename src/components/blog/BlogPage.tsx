@@ -70,20 +70,20 @@ const BlogPage = () => {
   return (
     <div className="pb-20">
       <div className="flex flex-col gap-3 my-4">
-        <div className="flex flex-row gap-2 items-center">
+        <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={lang === "vn" ? "Tìm kiếm..." : "Search..."}
-            className="px-3 py-2 border rounded w-full h-12"
+            className="px-3 py-2 border rounded w-full h-10 sm:h-12 text-sm sm:text-base"
           />
           <select
             value={category}
             onChange={(e) =>
               setCategory((e.target.value as "all" | CategoryKey) || "all")
             }
-            className="px-3 py-2 border rounded h-12"
+            className="px-3 py-2 border rounded h-10 sm:h-12 text-sm sm:text-base"
           >
             <option value="all">{lang === "vn" ? "Tất cả" : "All"}</option>
             {Object.keys(CATEGORY_LABELS).map((key) => {
@@ -112,7 +112,7 @@ const BlogPage = () => {
         </div>
 
         <div className="mt-6">
-          <div className="text-2xl font-extrabold mb-2">
+          <div className="text-xl sm:text-2xl font-extrabold mb-2">
             {lang === "vn" ? "Bài viết gần đây" : "Recent posts"}
           </div>
           <div className="flex flex-col gap-4">
@@ -136,7 +136,7 @@ const BlogPage = () => {
         </div>
 
         <div className="mt-8">
-          <div className="text-2xl font-extrabold mb-2">
+          <div className="text-xl sm:text-2xl font-extrabold mb-2">
             {lang === "vn" ? "Tất cả bài viết" : "All posts"}
           </div>
           <div className="flex flex-col gap-4">

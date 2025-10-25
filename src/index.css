@@ -148,3 +148,65 @@
   opacity: 0;
   transition: opacity 300ms ease;
 }
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .text-responsive-xs {
+    font-size: 0.75rem;
+  }
+  .text-responsive-sm {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .text-responsive-xs {
+    font-size: 0.875rem;
+  }
+  .text-responsive-sm {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .text-responsive-xs {
+    font-size: 1rem;
+  }
+  .text-responsive-sm {
+    font-size: 1.125rem;
+  }
+}
+
+/* Mobile-first responsive images */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Touch-friendly buttons for mobile */
+@media (max-width: 768px) {
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improved spacing for mobile */
+@media (max-width: 640px) {
+  .mobile-spacing {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Better text readability on small screens */
+@media (max-width: 640px) {
+  body {
+    line-height: 1.6;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+}

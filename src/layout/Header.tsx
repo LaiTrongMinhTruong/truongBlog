@@ -42,16 +42,16 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
     <>
       <header className="lg:flex lg:flex-row lg:items-stretch block w-full mx-auto">
         <div className="flex flex-col lg:w-2/3 w-full">
-          <div className="flex justify-between my-2">
-            <p className="text-lg">
+          <div className="flex flex-col sm:flex-row sm:justify-between my-2 gap-2 sm:gap-0">
+            <p className="text-sm sm:text-lg text-center sm:text-left">
               {lang === "vn" ? "blog cá nhân" : "persional blog"}
             </p>
-            <p className="text-lg">
+            <p className="text-sm sm:text-lg text-center sm:text-right">
               {lang === "vn" ? "web tui làm" : "website exclusive"}
             </p>
           </div>
           <div className="mb-2">
-            <h1 className="text-4xl lowercase text-center font-bold">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl lowercase text-center font-bold">
               {lang === "vn"
                 ? "lại trọng minh trường"
                 : "lai trong minh truong"}
@@ -59,7 +59,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
           </div>
 
           <div className="mb-2">
-            <p className="text-sm font-light text-justify">
+            <p className="text-xs sm:text-sm font-light text-justify">
               {lang === "vn"
                 ? "tớ viết để ghi lại hành trình của mình — những ngày bình yên xen lẫn bão tố, những câu chuyện nhỏ giúp tớ hiểu hơn về con người, về lòng biết ơn và sự kiên cường. Đây sẽ là nơi tớ giữ lại một phần tĩnh lặng giữa thế giới ồn ào."
                 : "i write to record my journey — the peaceful days mixed with the storms, the little stories that help me understand more about people, about gratitude and resilience. this will be where i keep a piece of silence in the noisy world."}
@@ -68,7 +68,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
           <img
             src={picNum01}
             alt="Main article cover"
-            className="w-full min-h-28"
+            className="w-full min-h-20 sm:min-h-28 object-cover"
             width="420"
             height="100"
           />
@@ -77,7 +77,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
           <img
             src={picNum02}
             alt="Magazine cover side image"
-            className="h-full"
+            className="h-full object-cover"
             width="120"
             height="250"
           />

@@ -40,8 +40,8 @@ function App() {
   return (
     <>
       <LanguageContext.Provider value={langContextValue}>
-        <div className="w-screen h-full font-mono lowercase transition-all duration-1000" style={{ backgroundImage: `url(${isDark ? darkBackground : lightBackground})`, backgroundSize: '500px' }}>
-          <div className="lg:w-1/2 lg:px-0 mx-auto relative w-full px-5">
+        <div className="w-screen min-h-screen font-mono lowercase transition-all duration-1000" style={{ backgroundImage: `url(${isDark ? darkBackground : lightBackground})`, backgroundSize: '500px' }}>
+          <div className="lg:w-1/2 xl:w-2/5 lg:px-0 mx-auto relative w-full px-4 sm:px-6 md:px-8">
             <Header isDark={isDark} toggleTheme={toggleTheme} />
             <div key={location.pathname} className="route-enter route-enter-active">
               <Outlet />

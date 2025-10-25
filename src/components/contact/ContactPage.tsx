@@ -77,10 +77,10 @@ const ContactPage = () => {
         </div>
       </Reveal>
       <Reveal>
-        <h3 className="text-3xl font-bold lowercase">{lang === "vn" ? "kết nối với tớ" : "Contact Me Now"}</h3>
+        <h3 className="text-2xl sm:text-3xl font-bold lowercase">{lang === "vn" ? "kết nối với tớ" : "Contact Me Now"}</h3>
       </Reveal>
       <Reveal>
-        <p className="text-md font-light text-center">
+        <p className="text-sm sm:text-md font-light text-center">
           {lang === "vn"
             ? "hãy liên hệ nếu có góp ý hay bất cứ mối quan tâm về sự hợp tác với tớ"
             : "please contact me if you have any comments or concerns about working with me."}
@@ -101,7 +101,7 @@ const ContactPage = () => {
         <div className="mb-4">{lang === "vn" ? "các dự án tớ làm/tham gia làm" : "projects I do/participate in"}</div>
       </Reveal>
       <Reveal>
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {lang === "vn" ? (project_vn.map((proj, index) => (
             <ProjectCard
               key={index}
@@ -122,8 +122,8 @@ const ContactPage = () => {
         </div>
       </Reveal>
       <Reveal>
-        <p className="text-md font-light text-center mb-4">{lang === "vn" ? "hoặc liên hệ tớ tại" : "or find me at"}</p>
-        <ul className="flex flex-col items-start justify-center gap-4">
+        <p className="text-sm sm:text-md font-light text-center mb-4">{lang === "vn" ? "hoặc liên hệ tớ tại" : "or find me at"}</p>
+        <ul className="flex flex-col items-start justify-center gap-3 sm:gap-4">
           <li className="flex flex-row items-center gap-4">
             <a href="mailto:mkhang189@gmail.com">
               <svg

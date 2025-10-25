@@ -24,7 +24,7 @@ const Navigator = () => {
   );
   return (
     <nav className="my-2 w-full">
-      <ul className="flex flex-row flex-wrap items-center justify-center gap-6 text-md font-semibold">
+      <ul className="flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-sm sm:text-md font-semibold">
         {links.map((link) => (
           <li key={link.path} className="lowercase">
             <NavLink
