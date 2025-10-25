@@ -34,8 +34,8 @@ const AboutPage = () => {
             </h3>
             <p className="text-xs sm:text-sm font-light text-justify lowercase">
               {lang === "vn"
-                ? "tớ thích gọi những trang web mình làm là "những góc nhỏ dễ thương trên internet", nơi người ta có thể ghé qua, thở chậm lại và hấy một chút bình yên. tớ có thể làm những website như blog này, hoặc những web bán hàng, portfolio, hay bất kỳ ý tưởng nào mang dấu ấn riêng của các cậu. nếu các cậu muốn cùng tớ tạo nên một góc nhỏ cho riêng mình, hãy liên hệ với tớ, tớ rất vui được lắng nghe. "
-                : "I like to call the websites I make "cute little corners on the internet", where people can come, slow down and find a little peace. I can make websites like this blog, or sales websites, portfolios, or any ideas that carry your own mark. If you want to create your own little corner with me, contact me, I'd love to hear. "}
+                ? "tớ thích gọi những trang web mình làm là 'những góc nhỏ dễ thương trên internet', nơi người ta có thể ghé qua, thở chậm lại và hấy một chút bình yên. tớ có thể làm những website như blog này, hoặc những web bán hàng, portfolio, hay bất kỳ ý tưởng nào mang dấu ấn riêng của các cậu. nếu các cậu muốn cùng tớ tạo nên một góc nhỏ cho riêng mình, hãy liên hệ với tớ, tớ rất vui được lắng nghe. "
+                : "I like to call the websites I make 'cute little corners on the internet', where people can come, slow down and find a little peace. I can make websites like this blog, or sales websites, portfolios, or any ideas that carry your own mark. If you want to create your own little corner with me, contact me, I'd love to hear. "}
               <Link to={`/${lang}/contact`} className="font-bold underline">
                 {lang === "vn" ? "liên hệ ngay." : "Contact me now."}
               </Link>
