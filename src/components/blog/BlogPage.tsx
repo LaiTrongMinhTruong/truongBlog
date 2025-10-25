@@ -70,47 +70,49 @@ const BlogPage = () => {
   return (
     <div className="pb-20">
       <div className="flex flex-col gap-3 my-4">
-        <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={lang === "vn" ? "Tìm kiếm..." : "Search..."}
-            className="px-3 py-2 border rounded w-full h-10 sm:h-12 text-sm sm:text-base"
-          />
-          <select
-            value={category}
-            onChange={(e) =>
-              setCategory((e.target.value as "all" | CategoryKey) || "all")
-            }
-            className="px-3 py-2 border rounded h-10 sm:h-12 text-sm sm:text-base"
-          >
-            <option value="all">{lang === "vn" ? "Tất cả" : "All"}</option>
-            {Object.keys(CATEGORY_LABELS).map((key) => {
-              const k = key as CategoryKey;
-              const label = CATEGORY_LABELS[k][lang];
-              return (
-                <option key={k} value={k}>
-                  {label}
-                </option>
-              );
-            })}
-          </select>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {Object.entries(CATEGORY_LABELS).map(([k, info]) => (
-            <Link
-              key={k}
-              to={`/${lang}/blog/category/${k}`}
-              className="p-3 border rounded block"
+        <Reveal>
+          <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder={lang === "vn" ? "Tìm kiếm..." : "Search..."}
+              className="px-3 py-2 border rounded w-full h-10 sm:h-12 text-sm sm:text-base"
+            />
+            <select
+              value={category}
+              onChange={(e) =>
+                setCategory((e.target.value as "all" | CategoryKey) || "all")
+              }
+              className="px-3 py-2 border rounded h-10 sm:h-12 text-sm sm:text-base"
             >
-              <div className="text-lg font-semibold">{info[lang]}</div>
-              <div className="text-sm opacity-80">{info.desc[lang]}</div>
-            </Link>
-          ))}
-        </div>
-
+              <option value="all">{lang === "vn" ? "Tất cả" : "All"}</option>
+              {Object.keys(CATEGORY_LABELS).map((key) => {
+                const k = key as CategoryKey;
+                const label = CATEGORY_LABELS[k][lang];
+                return (
+                  <option key={k} value={k}>
+                    {label}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {Object.entries(CATEGORY_LABELS).map(([k, info]) => (
+              <Link
+                key={k}
+                to={`/${lang}/blog/category/${k}`}
+                className="p-3 border rounded block"
+              >
+                <div className="text-lg font-semibold">{info[lang]}</div>
+                <div className="text-sm opacity-80">{info.desc[lang]}</div>
+              </Link>
+            ))}
+          </div>
+        </Reveal>
         <div className="mt-6">
           <div className="text-xl sm:text-2xl font-extrabold mb-2">
             {lang === "vn" ? "Bài viết gần đây" : "Recent posts"}

@@ -4,7 +4,7 @@ const RightCard = () => {
   const params = useParams();
   const lang = (params.lang as "vn" | "en") ?? "vn";
   return (
-    <div className="flex flex-col lg:flex-row items-stretch my-2">
+    <div className="flex flex-row items-stretch my-2 gap-4">
       <div className="basis-1/2">
         <p className="text-xs sm:text-sm font-light text-justify">
           {lang === "vn"
@@ -12,9 +12,9 @@ const RightCard = () => {
             : "Every morning, I start with small things: exercise, sunbathing, and taking care of plants. Slow down, feel more, and sometimes you will find happiness somewhere. We don't need to find peace far away, the whole sky can sometimes be found in small things."}
         </p>
       </div>
-      <div className="lg:flex flex-col items-center basis-1/2 ml-0 lg:ml-4 mt-4 lg:mt-0 hidden">
+      <div className="flex flex-col items-center basis-1/2 ml-0 lg:ml-4 mt-4 lg:mt-0 lg:gap-4">
         <div>
-          <img src={picture} alt="" className="w-full h-auto" />
+          <img src={picture} alt="" className="lg:w-full md:h-auto h-52" />
         </div>
         <h4 className="text-lg sm:text-xl font-bold lowercase text-center">
           {lang === "vn" ? "điều nhỏ bé" : "little things"}

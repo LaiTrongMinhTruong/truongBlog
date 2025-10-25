@@ -42,7 +42,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
     <>
       <header className="lg:flex lg:flex-row lg:items-stretch block w-full mx-auto">
         <div className="flex flex-col lg:w-2/3 w-full">
-          <div className="flex flex-col sm:flex-row sm:justify-between my-2 gap-2 sm:gap-0">
+          <div className="flex flex-row justify-between my-2 gap-2">
             <p className="text-sm sm:text-lg text-center sm:text-left">
               {lang === "vn" ? "blog cá nhân" : "persional blog"}
             </p>
@@ -90,7 +90,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
           type="button"
           onClick={toggleTheme}
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-          className="text-sm px-3 py-1 border rounded h-8"
+          className="text-sm px-2 py-1 border rounded bg-transparent "
         >
           {isDark
             ? lang === "en"
@@ -100,17 +100,17 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
             ? "Dark"
             : "Đêm"}
         </button>
-        <div className="ml-2">
+
           <select
             aria-label="Language selector"
-            className="text-sm px-2 py-1 border rounded bg-transparent h-8"
+            className="text-sm px-2 py-1 border rounded bg-transparent ml-2 "
             value={currentLang}
             onChange={(e) => onChangeLang(e.target.value as "vn" | "en")}
           >
             <option value="vn">VN</option>
             <option value="en">EN</option>
           </select>
-        </div>
+        
       </div>
       <Separator className="my-4 bg-[color:var(--border)] h-[1px] w-full" />
     </>

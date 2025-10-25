@@ -13,6 +13,10 @@ const Group3Left = () => {
         orientation="vertical"
         className="my-4 bg-[color:var(--border)] w-[1px] hidden lg:block"
       />
+      <Separator
+        orientation="horizontal"
+        className="my-4 bg-[color:var(--border)] h-[1px] lg:hidden block"
+      />
       <div className="flex flex-col justify-around items-stretch flex-1">
         <RightCard />
         <Separator
