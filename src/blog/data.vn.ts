@@ -13,41 +13,15 @@ export type BlogMeta = {
 
 export const BLOGS_VN: BlogMeta[] = [
   {
-    id: "dieu-nho-be",
-    title: "Điều nhỏ bé",
-    description: "Những điều nhỏ bé trong ngày giúp mình bình an hơn.Những điều nhỏ bé trong ngày giúp mình bình an hơn.Những điều nhỏ bé trong ngày giúp mình bình an hơn.Những điều nhỏ bé trong ngày giúp mình bình an hơn.Những điều nhỏ bé trong ngày giúp mình bình an hơn.Những điều nhỏ bé trong ngày giúp mình bình an hơn.Những điều nhỏ bé trong ngày giúp mình bình an hơn.",
-    category: ["tam-su", 'an-ui'],
-    date: "2025-09-18",
-    cover: "hoa_sen.jpg",
+    id: "nhat-ky-4",
+    title: "nhật ký 4: mình nhớ mẹ",
+    description: "Mình viết bài này để tâm sự với những bạn sống xa nhà, những điều mình viết sẽ giúp ích cho các bạn trong việc kiểm soát cảm xúc, trở nên năng lượng và yêu thương hơn, giảm thiểu tác động tiêu cực từ cuộc sống, và một chút bật mí tình yêuu.",
+    category: ["tam-su", 'ke-chuyen'],
+    date: "2023-04-24",
+    cover: "nhat-ky-4.jpg",
     privatePost: false,
   },
-  {
-    id: "di-tiep",
-    title: "Đi tiếp",
-    description: "Mệt thì nghỉ, rồi lại bước tiếp — chậm cũng được.",
-    category: ["ke-chuyen"],
-    date: "2025-09-12",
-    cover: "hoa_sen.jpg",
-    privatePost: false,
-  },
-  {
-    id: "hoa-sen",
-    title: "Hoa sen trong bùn",
-    description: "Chuyện về sự kiên cường và biết ơn.",
-    category: ["an-ui"],
-    date: "2025-09-05",
-    cover: "hoa_sen.jpg",
-    privatePost: false,
-  },
-  {
-    id: "chuyen-ngoai-le-01",
-    title: "Một chút chuyện ngoài lề",
-    description: "Mẩu chuyện nhỏ không đầu không cuối.",
-    category: ["chuyen-ngoai-le"],
-    date: "2025-08-30",
-    cover: "hoa_sen.jpg",
-    privatePost: false,
-  },
+
 ];
 
 export const CATEGORY_LABELS_VN: Record<

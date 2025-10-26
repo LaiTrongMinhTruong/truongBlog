@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useMemo } from "react";
 import { isSupportedLang, type SupportedLang } from "./lib/utils";
 import { LanguageContext } from "./context/LanguageContext";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   const location = useLocation();
@@ -48,6 +49,7 @@ function App() {
             </div>
             <Footer />
           </div>
+          <ScrollToTopButton />
         </div>
       </LanguageContext.Provider>
     </>

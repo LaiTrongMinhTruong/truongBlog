@@ -52,6 +52,11 @@ const PostPage = () => {
       {meta?.description && <p className="font-fuzzy text-xl font-medium">{meta.description}</p>}
       <div className="font-fuzzy mt-12">
       <Mdx />
+      <div className="mb-4">
+        <Link className="text-sm underline" to={`/${lang}/blog`}>
+          {lang === "vn" ? "← Quay lại blog" : "← Back to blog"}
+        </Link>
+      </div>
       </div>
     </article>
   );
