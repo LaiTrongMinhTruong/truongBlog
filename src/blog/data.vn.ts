@@ -1,6 +1,5 @@
 export type CategoryKey = "tam-su" | "an-ui" | "ke-chuyen" | "chuyen-ngoai-le";
 
-
 export type BlogMeta = {
   id: string;
   title: string;
@@ -15,13 +14,33 @@ export const BLOGS_VN: BlogMeta[] = [
   {
     id: "nhat-ky-4",
     title: "nhật ký 4: mình nhớ mẹ",
-    description: "Mình viết bài này để tâm sự với những bạn sống xa nhà, những điều mình viết sẽ giúp ích cho các bạn trong việc kiểm soát cảm xúc, trở nên năng lượng và yêu thương hơn, giảm thiểu tác động tiêu cực từ cuộc sống, và một chút bật mí tình yêuu.",
-    category: ["tam-su", 'ke-chuyen'],
+    description:
+      "Mình viết bài này để tâm sự với những bạn sống xa nhà, những điều mình viết sẽ giúp ích cho các bạn trong việc kiểm soát cảm xúc, trở nên năng lượng và yêu thương hơn, giảm thiểu tác động tiêu cực từ cuộc sống, và một chút bật mí tình yêuu.",
+    category: ["tam-su", "ke-chuyen"],
     date: "2023-04-24",
     cover: "nhat-ky-4.jpg",
     privatePost: false,
   },
-
+  {
+    id: "gioi-thieu-1-chut",
+    title: "giới thiệu một chút",
+    description:
+      "mình xin viết một bài để giới thiệu về trang blog này, cũng như ít nhiều nói về tình hình sức khỏe hiện tại. mong rằng mọi người sẽ hiểu hơn về mình qua bài viết này.",
+    category: ["ke-chuyen"],
+    date: "2025-10-27",
+    cover: "gioi-thieu-1-chut.jpg",
+    privatePost: false,
+  },
+  {
+    id: "cau-cho-to-cai-nay-duoc-khong",
+    title: "nè, cậu cho tớ cái này được không?",
+    description:
+      "Bài này mình muốn bày tỏ yêu thương tới mọi người và mong muốn nhận lại yêu thương như là nguồn động lực to lớn cho mình để vượt qua quá trình chữa bệnh sắp tới.",
+    category: ["ke-chuyen", "tam-su"],
+    date: "2023-08-07",
+    cover: "cau-cho-to-cai-nay-duoc-khong.jpg",
+    privatePost: false,
+  },
 ];
 
 export const CATEGORY_LABELS_VN: Record<
