@@ -115,7 +115,7 @@ const ContactPage = () => {
         </div>
       </Reveal>
       <Reveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {lang === "vn"
             ? project_vn.map((proj, index) => (
                 <ProjectCard
@@ -243,6 +243,20 @@ const ContactPage = () => {
                 className="hover:underline"
               >
                 m.truonq_
+              </a>
+            </p>
+          </li>
+          <li className="flex flex-row items-center gap-4">
+            <a href="https://github.com/LaiTrongMinhTruong">
+              <img src="/github-mark.png" alt="github icon" className="w-8 h-8"/>
+            </a>
+            <p>
+              github:{" "}
+              <a
+                href="https://github.com/LaiTrongMinhTruong"
+                className="hover:underline"
+              >
+                LaiTrongMinhTruong
               </a>
             </p>
           </li>
