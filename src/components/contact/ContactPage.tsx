@@ -7,67 +7,107 @@ import ProjectCard from "./ProjectCard";
 const ContactPage = () => {
   const project_en = [
     {
-      title: "Personal CV for Client 1",
-      desc: "A modern personal CV website showcasing all the essential elements of a professional resume.",
+      title: "Personal CV Template No. 1",
+      desc: "This is one of the first projects I built with Vite and deployed on Vercel. The website uses Vite + React + TypeScript + Tailwind CSS. The disadvantage is that I haven't implemented a responsive interface for smaller devices (mobile) yet, so the user experience is not optimal. Also, the current interface is quite simple and not very distinctive.",
       link: "https://customer01cv.vercel.app/",
+      // imgUrl: "/project-covers/1.jpg", // sample url
+      privatePrj: false,
+    },
+    {
+      title: "Personal CV Template No. 2",
+      desc: "This website is another exercise I used to practice familiarizing myself with existing tools, as well as learning some new technologies like framer-motion for animation effects. I used Next.js + React + TypeScript + Tailwind CSS + framer-motion for this web. Currently, I also haven't implemented a responsive interface for smaller devices (mobile), so the user experience is not optimal. The interface is also quite simple and doesn't offer a distinctive look or good experience.",
+      link: "https://customer02cv.netlify.app/",
+      // link: "https://customer02cv.vercel.app/",
+      // imgUrl: "/project-covers/1.jpg", // sample url
+      privatePrj: false,
+    },
+    {
+      title: "Personal CV Template No. 3",
+      desc: "Yet another practice exercise of mine; this time, I decided to create my own CV. Since these three CV templates were all practice exercises built almost simultaneously, there isn't much difference in technology or drawbacks.",
+      link: "https://minh-truong-cv.vercel.app/about",
       imgUrl: "",
+      privatePrj: false,
     },
     {
       title: "Boundless Web",
-      desc: "A complete e-commerce platform with a visually appealing and modern interface.",
+      desc: "I focused quite a bit on this project. This website also marked the transition from an interface using only hard-coded data to one using data imported from a JSON file (a small change, but a step). Compared to previous exercises, this website has a better, more modern interface, smooth animations, and is responsive across various devices. However, this project is still only focused on the interface; the data is hard-coded, and it doesn't use a backend or database yet, so the functionality isn't truly complete.",
       link: "https://boundlessofficial.vercel.app/",
       imgUrl: "",
+      privatePrj: false,
     },
     {
-      title: "Minh Truong Example CV",
-      desc: "A responsive blog website featuring content management functionalities.",
-      link: "https://minh-truong-cv.vercel.app/about",
-      imgUrl: "",
-    },
-    {
-      title: "Top Contact Manager App",
-      desc: "A productivity application that helps users manage and track their tasks efficiently.",
+      title: "Contact List Application No. 1",
+      desc: "An exercise I built when starting to familiarize myself with PHP and basic backend logic. For this application, I used PHP (running in a XAMPP environment), MySQL for data storage, and Tailwind CSS for the interface. The application has basic functions like adding, editing, deleting, and searching contacts. Data is temporarily stored in the browser's memory (for a few days). However, the interface is not optimized for smaller devices (mobile), so the experience is not optimal.",
       link: "https://contact-list-demo-lovat.vercel.app/",
       imgUrl: "",
+      privatePrj: false,
     },
     {
-      title: "Truong’s Blog",
-      desc: "A personal blog designed to help users write, reflect, and share their own stories effectively.",
+      title: "Truong's Blog",
+      desc: "This is the application you are currently using to read these lines. I spent quite a lot of time on it, from conceptualizing and designing to coding, adding features, and making it responsive. The result is decent, I'd say. The big advantage of this website is that since I wrote it myself, I have the ability to extend it as I wish, and that's also the drawback as I currently don't know what else to extend.",
       link: "https://blog-cua-truong.vercel.app/",
       imgUrl: "",
+      privatePrj: true,
+    },
+    {
+      title: "Keansburg Park",
+      desc: "I dedicated a lot of time to collaborating with the team and completing this project, from interface design to building complex features like the shopping cart, payment, product management, and an admin page. This website uses Vite + React + TypeScript + Bootstrap, includes both frontend, backend, and a database, communicating via API calls. As of 2025, this product is likely the most polished, complete, and complex one I've been involved in. I learned a lot of cool things from this project about teamwork, the software development process, and new technologies. This product was made to be responsive across multiple devices, combined with smooth, automated animations, greatly enhancing the user experience.",
+      link: "https://blog-cua-truong.vercel.app/",
+      imgUrl: "",
+      privatePrj: false,
     },
   ];
 
   const project_vn = [
     {
-      title: "CV cá nhân cho khách hàng 1",
-      desc: "Website cv cá nhân hiện đại thể hiện các yếu tố cần thiết của một cv chuyên nghiệp.",
+      title: "mẫu cv cá nhân số 1",
+      desc: "đây là một trong những dự án đầu mình làm với vite được deploy lên vercel. web dùng vite + react + typescript + tailwindcss. nhược điểm là hiện sản phẩm này mình chưa làm giao diện trên các thiết bị nhỏ hơn (mobile) nên trải nghiệm chưa tốt. đồng thời giao diện còn đang khá đơn giản, chưa đặc sắc lắm.",
       link: "https://customer01cv.vercel.app/",
       // imgUrl: "/project-covers/1.jpg", //url mau
+      privatePrj: false,
+    },
+    {
+      title: "mẫu cv cá nhân số 2",
+      desc: "website này là một bài tập khác mình dùng để tập luyện khả năng làm quen với các công cụ cũ, cũng như học thêm một số công nghệ mới như framer-motion để làm hiệu ứng chuyển động. web này mình dùng nextjs + react + typescript + tailwindcss + framer-motion. hiện sản phẩm này mình cũng chưa làm giao diện trên các thiết bị nhỏ hơn (mobile) nên trải nghiệm chưa tốt. đồng thời giao diện còn đang khá đơn giản, chưa mang lại nét đặc trưng hay trải nghiệm tốt.",
+      link: "https://customer02cv.netlify.app/",
+      // link: "https://customer02cv.vercel.app/",
+      // imgUrl: "/project-covers/1.jpg", //url mau
+      privatePrj: false,
+    },
+    {
+      title: "mẫu cv cá nhân số 3",
+      desc: "lại là một bài tập để luyện của mình, lần này mình thử tạo luôn cv của mình, vì 3 mẫu cv này đều là bài tập, được làm gần như cùng lúc nên không có sự khác biệt nhiều về công nghệ hay nhược điểm.",
+      link: "https://minh-truong-cv.vercel.app/about",
+      imgUrl: "",
+      privatePrj: false,
     },
     {
       title: "Boundless web",
-      desc: "Nền tảng thương mại điện tử đầy đủ với giao diện bắt măt, hiện đại.",
+      desc: "mình khá tập trung vào dự án này, web này cũng là bước đánh dấu chuyển từ web giao diện chỉ sử dụng dữ liệu cứng sang web sử dụng dữ liệu import từ file json (thay đổi cũng nhỏ). Nhưng so với những bài tập lúc trước thì web này có giao diện đẹp hơn, hiện đại hơn, animation mượt và hỗ trợ trên nhiều thiết bị. tuy nhiên dự án này vẫn chỉ đang dừng lại ở phần giao diện, dữ liệu là dữ liệu cứng, chưa sử dụng backend hay database nên tính năng chưa thực sự hoàn chỉnh.",
       link: "https://boundlessofficial.vercel.app/",
       imgUrl: "",
-    },
-    {
-      title: "Minh Trường example cv",
-      desc: "Website blog đáp ứng với các tính năng quản lý nội dung.",
-      link: "https://minh-truong-cv.vercel.app/about",
-      imgUrl: "",
+      privatePrj: false,
     },
     {
       title: "Ứng dụng danh bạ số 1",
-      desc: "Ứng dụng năng suất giúp người dùng quản lý và theo dõi công việc hiệu quả.",
+      desc: "một bài tập mình làm khi bắt đầu làm quen với php và logic căn bản của backend, ứng dụng này mình sử dụng php (chạy trên môi trường của xampp), mysql để lưu trữ dữ liệu, tailwindcss để làm giao diện. ứng dụng này có các chức năng cơ bản như thêm, sửa, xóa, tìm kiếm liên hệ, dữ liệu được lưu tạm thời ở bộ nhớ của trình duyệt (trong vài ngày). tuy nhiên giao diện chưa được tối ưu cho các thiết bị nhỏ hơn (mobile) nên trải nghiệm chưa tốt.",
       link: "https://contact-list-demo-lovat.vercel.app/",
       imgUrl: "",
+      privatePrj: false,
     },
     {
       title: "Blog của Trường",
-      desc: "Ứng dụng năng suất giúp người dùng quản lý và theo dõi công việc hiệu quả.",
+      desc: "đây là ứng dụng hiện bạn đang sử dụng để đọc những dòng này. mình cũng mất khá nhiều thời gian từ việc lên ý tưởng, thiết kế, code, làm thêm chức năng, responsive, nhưng kết quả cũng gọi là ổn. ưu điểm lớn của web này là do mình tự viết nên mình có khả năng mở rộng theo ý mình, và đó cũng là nhược điểm khi hiện tại mình chưa biết mở rộng thêm cái gì.",
       link: "https://blog-cua-truong.vercel.app/",
       imgUrl: "",
+      privatePrj: true,
+    },
+    {
+      title: "keansburg park",
+      desc: "mình dành khá nhiều thời gian để tham gia cùng team và hoàn thiện dự án này, từ việc thiết kế giao diện đến xây dựng các tính năng phức tạp như giỏ hàng, thanh toán và quản lý sản phẩm, admin page. web này mình dùng vite + react + typescript + bootstrap, có cả frontend, backend, database, sử dụng api call để giao tiếp với nhau. sản phẩm này tính tới thời điểm năm 2025 có lẽ là sản phẩm chỉnh chu, hoàn chỉnh và phức tạp nhất mà mình tham gia làm, từ dự án này mình học được rất nhiều thứ hay ho về cách làm việc nhóm, quy trình phát triển phần mềm cũng như các công nghệ mới. sản phẩm này đã được làm để thích ứng trên nhiều thiết bị (responsive), kết hợp cùng animation mượt mà, tự động giúp tăng trải nghiệm người dùng rất nhiều.",
+      link: "https://blog-cua-truong.vercel.app/",
+      imgUrl: "",
+      privatePrj: false,
     },
   ];
   const params = useParams();
@@ -96,7 +136,10 @@ const ContactPage = () => {
         </p>
       </Reveal>
       <Reveal>
-        <Button className="hover:underline mb-8" variant="outline">
+        <Button
+          className="hover:underline mb-8 bg-transparent"
+          variant="outline"
+        >
           <a
             href="https://minh-truong-cv.vercel.app/contact"
             target="_blank"
@@ -114,8 +157,8 @@ const ContactPage = () => {
             : "projects I do/participate in"}
         </div>
       </Reveal>
-      <Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <Reveal className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full">
           {lang === "vn"
             ? project_vn.map((proj, index) => (
                 <ProjectCard
@@ -124,6 +167,7 @@ const ContactPage = () => {
                   desc={proj.desc}
                   link={proj.link}
                   imgUrl={proj.imgUrl}
+                  privatePrj={proj.privatePrj}
                 />
               ))
             : project_en.map((proj, index) => (
@@ -133,6 +177,7 @@ const ContactPage = () => {
                   desc={proj.desc}
                   link={proj.link}
                   imgUrl={proj.imgUrl}
+                  privatePrj={proj.privatePrj}
                 />
               ))}
         </div>
@@ -248,7 +293,11 @@ const ContactPage = () => {
           </li>
           <li className="flex flex-row items-center gap-4">
             <a href="https://github.com/LaiTrongMinhTruong">
-              <img src="/github-mark.png" alt="github icon" className="w-8 h-8"/>
+              <img
+                src="/github-mark.png"
+                alt="github icon"
+                className="w-8 h-8"
+              />
             </a>
             <p>
               github:{" "}

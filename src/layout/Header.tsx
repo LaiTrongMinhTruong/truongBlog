@@ -47,7 +47,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
               {lang === "vn" ? "blog cá nhân" : "persional blog"}
             </p>
             <p className="text-sm sm:text-lg text-center sm:text-right">
-              {lang === "vn" ? "web tui làm" : "website exclusive"}
+              {lang === "vn" ? "web handmade" : "handmade web"}
             </p>
           </div>
           <div className="mb-2">
