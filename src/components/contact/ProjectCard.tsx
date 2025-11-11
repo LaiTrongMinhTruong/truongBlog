@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router";
+import Reveal from "../Reveal";
 
 export type ProjectCardProps = {
   title: string;
@@ -35,9 +36,11 @@ const ProjectCard = ({
         )}
       </div>
       {showDesc && (
-        <div className="my-4 p-2 border-y">
-          <p className="text-sm">{desc}</p>
-        </div>
+        <Reveal>
+          <div className="my-4 p-2 border-y">
+            <p className="text-sm">{desc}</p>
+          </div>
+        </Reveal>
       )}
       <div className="flex flex-row justify-around">
         <a
