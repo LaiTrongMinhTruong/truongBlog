@@ -29,7 +29,7 @@ export const BLOGS_EN: BlogMeta[] = [
     category: ["ke-chuyen"],
     date: "2025-10-27",
     cover: "gioi-thieu-1-chut.jpg",
-    privatePost: false,
+    privatePost: true,
   },
   {
     id: "cau-cho-to-cai-nay-duoc-khong",
@@ -39,7 +39,7 @@ export const BLOGS_EN: BlogMeta[] = [
     category: ["ke-chuyen", "tam-su"],
     date: "2023-08-07",
     cover: "cau-cho-to-cai-nay-duoc-khong.jpg",
-    privatePost: false,
+    privatePost: true,
 },
 ];
 

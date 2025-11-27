@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams } from "react-router";
 import avatar from "../../assets/avatarContact.png";
 import Reveal from "../Reveal";
@@ -112,6 +113,10 @@ const ContactPage = () => {
   ];
   const params = useParams();
   const lang = (params.lang as "vn" | "en") ?? "vn";
+  const [showPrj, setShowPrj] = useState(false);
+  const handleShowPrj = () => {
+    setShowPrj(false);
+  };
   return (
     <div className="flex flex-col items-center justify-around gap-4 pb-40 pt-15">
       <Reveal>
@@ -120,6 +125,7 @@ const ContactPage = () => {
             src={avatar}
             alt="Lai Trong Minh Truong"
             className="rounded-full"
+            onClick={handleShowPrj}
           />
         </div>
       </Reveal>
@@ -151,36 +157,40 @@ const ContactPage = () => {
         </Button>
       </Reveal>
       <Reveal>
-        <div className="mb-4">
-          {lang === "vn"
-            ? "các dự án tớ làm/tham gia làm"
-            : "projects I do/participate in"}
-        </div>
+        {showPrj ? (
+          <div className="mb-4">
+            {lang === "vn"
+              ? "các dự án tớ làm/tham gia làm"
+              : "projects I do/participate in"}
+          </div>
+        ) : null}
       </Reveal>
       <Reveal className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full">
-          {lang === "vn"
-            ? project_vn.map((proj, index) => (
-                <ProjectCard
-                  key={index}
-                  title={proj.title}
-                  desc={proj.desc}
-                  link={proj.link}
-                  imgUrl={proj.imgUrl}
-                  privatePrj={proj.privatePrj}
-                />
-              ))
-            : project_en.map((proj, index) => (
-                <ProjectCard
-                  key={index}
-                  title={proj.title}
-                  desc={proj.desc}
-                  link={proj.link}
-                  imgUrl={proj.imgUrl}
-                  privatePrj={proj.privatePrj}
-                />
-              ))}
-        </div>
+        {showPrj ? (
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full">
+            {lang === "vn"
+              ? project_vn.map((proj, index) => (
+                  <ProjectCard
+                    key={index}
+                    title={proj.title}
+                    desc={proj.desc}
+                    link={proj.link}
+                    imgUrl={proj.imgUrl}
+                    privatePrj={proj.privatePrj}
+                  />
+                ))
+              : project_en.map((proj, index) => (
+                  <ProjectCard
+                    key={index}
+                    title={proj.title}
+                    desc={proj.desc}
+                    link={proj.link}
+                    imgUrl={proj.imgUrl}
+                    privatePrj={proj.privatePrj}
+                  />
+                ))}
+          </div>
+        ) : null}
       </Reveal>
       <Reveal>
         <p className="text-sm sm:text-md font-light text-center mb-4">
